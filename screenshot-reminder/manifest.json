@@ -1,0 +1,23 @@
+  {
+    "name": "Getting Started Example",
+    "version": "1.0",
+    "permissions": ["storage", "tabs"],
+    "description": "Custom",
+    "manifest_version": 2,
+    "content_scripts": [
+    	{
+    		"matches": [
+    			"<all_urls>"
+    		],
+    		"js": ["content.js"]
+    	}
+    ],
+    "background": {
+    	"scripts": ["background.js"]
+    },
+    "browser_action": {
+    	"default_icon": "icons/icon.png",
+    	"default_popup": "popup.html",
+    	"default_title": "yeap"
+    }
+  }
