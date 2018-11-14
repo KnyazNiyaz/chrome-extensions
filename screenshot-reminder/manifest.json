@@ -4,6 +4,10 @@
     "permissions": ["storage", "tabs"],
     "description": "Custom",
     "manifest_version": 2,
+    "web_accessible_resources": [
+        "images/*.jpg",
+        "images/*.png"
+    ],
     "content_scripts": [
     	{
     		"matches": [
