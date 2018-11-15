@@ -13,7 +13,7 @@
     		"matches": [
     			"<all_urls>"
     		],
-    		"js": ["content.js"]
+    		"js": ["content.js", "html2canvas.js"]
     	}
     ],
     "background": {
