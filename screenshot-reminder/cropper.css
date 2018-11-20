@@ -5,6 +5,9 @@
   position: relative;
   touch-action: none;
   user-select: none;
+  position: absolute;
+  top: 0;
+  z-index: 10000;
 
   & img {
     display: block;

@@ -24,13 +24,40 @@ function gotMessage(msg,sender,sendResponse) {
 		canvas.style.top = "0";
 		canvas.style.zIndex = "1000"
 		canvas.id = "myCanvas"; 
+    	document.body.appendChild(canvas);
+
 		setTimeout(function() {
 			var $canvas = $('#myCanvas');
 			console.log($canvas);
-    		var cropper = $canvas.cropper({
-             	aspectRatio: 16 / 9
-           	});
-    		document.body.appendChild(canvas);
+    		// var cropper = $canvas.cropper({
+      //        	aspectRatio: 16 / 9
+      //      	});
+
+           		$canvas.cropper({
+      				autoCrop: false,
+      				movable: false,
+      				viewMode: 3,
+      				crop: function(e) {
+      				  // Output the result data for cropping image.
+      				  console.log(e.x);
+      				  console.log(e.y);
+      				  console.log(e.width);
+      				  console.log(e.height);
+      				  console.log(e.rotate);
+      				  console.log(e.scaleX);
+      				  console.log(e.scaleY);
+				
+      				},
+      				cropend: function (e) {
+      					console.log(e);
+      				    // if (bool == 0) {
+      				    // $('#cropTimetable').toggle();
+      				    // $('#clearCrop').toggle();
+      				    // $('#downloadTimetable').toggle();
+      				    // $('#downloadHDTimetable').toggle();
+      				    // bool = 1;
+      				  }
+     			 });          
 		}, 1000);
 		
     	
