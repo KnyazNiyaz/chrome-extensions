@@ -25,8 +25,9 @@ function gotMessage(msg,sender,sendResponse) {
 		canvas.style.zIndex = "1000"
 		canvas.id = "myCanvas"; 
 		setTimeout(function() {
-			var canvas = $('#myCanvas');
-    		var cropper = canvas.cropper({
+			var $canvas = $('#myCanvas');
+			console.log($canvas);
+    		var cropper = $canvas.cropper({
              	aspectRatio: 16 / 9
            	});
     		document.body.appendChild(canvas);

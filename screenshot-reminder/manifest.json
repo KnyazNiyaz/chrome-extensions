@@ -10,10 +10,11 @@
     ],
     "content_scripts": [
     	{
+            "css": [ "cropper.css" ],
     		"matches": [
     			"<all_urls>"
     		],
-    		"js": ["cropper.js", "jquery-3.3.1.js",  "html2canvas.js", "content.js"]
+    		"js": ["jquery-3.3.1.js", "cropper.js", "jquery-cropper.js", "html2canvas.js", "content.js"]
     	}
     ],
     "background": {
