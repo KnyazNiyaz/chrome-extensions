@@ -13,7 +13,7 @@
     		"matches": [
     			"<all_urls>"
     		],
-    		"js": ["content.js", "html2canvas.js"]
+    		"js": ["cropper.js", "jquery-3.3.1.js",  "html2canvas.js", "content.js"]
     	}
     ],
     "background": {

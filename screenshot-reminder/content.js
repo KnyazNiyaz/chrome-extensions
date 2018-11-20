@@ -5,6 +5,7 @@ chrome.runtime.onMessage.addListener(gotMessage);
 let a = chrome.runtime.getURL('images/123.png');
 console.log(a);
 
+
 function gotMessage(msg,sender,sendResponse) {
 	var popup = document.createElement("div");
 	var bg = document.createElement("div");
@@ -22,6 +23,19 @@ function gotMessage(msg,sender,sendResponse) {
 		canvas.style.position = "absolute";
 		canvas.style.top = "0";
 		canvas.style.zIndex = "1000"
-    	document.body.appendChild(canvas);
+		canvas.id = "myCanvas"; 
+		setTimeout(function() {
+			var canvas = $('#myCanvas');
+    		var cropper = canvas.cropper({
+             	aspectRatio: 16 / 9
+           	});
+    		document.body.appendChild(canvas);
+		}, 1000);
+		
+    	
+    	// cropper = new Cropper(canvas);
+      	
+
 	});
+	
 }
