@@ -53,6 +53,7 @@ function gotMessage(msg,sender,sendResponse) {
 						img.style.cssText = "width: 100%; height: auto;"
 						popup.appendChild(img);
 						document.body.appendChild(popup);
+						//check
       				    // if (bool == 0) {
       				    // $('#cropTimetable').toggle();
       				    // $('#clearCrop').toggle();
