@@ -286,3 +286,6 @@
   cursor: not-allowed;
 }
 
+.cropper-canvas {
+  transform: translate(0) !important;
+}
